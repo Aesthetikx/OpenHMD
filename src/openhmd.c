@@ -162,7 +162,7 @@ OHMD_APIENTRYDLL const char* OHMD_APIENTRY ohmd_list_gets(ohmd_context* ctx, int
 	case OHMD_PATH:
 		return ctx->list.devices[index].path;
 	case OHMD_DRIVER:
-		return ctx->list.devices[index].driver;
+		return ctx->list.devices[index].driver->name;
 	default:
 		return NULL;
 	}
