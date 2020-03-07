@@ -645,3 +645,13 @@ ohmd_status ohmd_require_version(int major, int minor, int patch)
 
 	return OHMD_S_OK;
 }
+
+void ohmd_print_available_drivers(ohmd_context* ctx)
+{
+	printf("available drivers:\n");
+	int i;
+	for (i = 0; i < ctx->num_drivers; ++i)
+	{
+		printf("  %s\n", ctx->drivers[i]->name);
+	}
+}
